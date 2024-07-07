@@ -1,0 +1,16 @@
+[package]
+name = "cks-slavia"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "*"
+shuttle-axum = "*"
+shuttle-runtime = "*"
+tokio = "1.28.2"
+tower-http = {version = "*", features = ["fs", "cors"]}
+shuttle-shared-db = { version = "*", features = ["postgres", "sqlx"] }
+sqlx = { version = "*", features = ["runtime-tokio-native-tls", "postgres", "macros"] }
+serde = "*"
+pbkdf2 = {version = "*", features = ['simple']}
+rand_core = { version = "*", features = ["std"] }
